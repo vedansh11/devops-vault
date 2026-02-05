@@ -86,6 +86,7 @@ TCP/IP follows a **4-layer architecture**:
 
 ## 1. Application Layer
 
+![[application-layer.gif]]
 ### Responsibilities
 
 - Provides network services to applications
