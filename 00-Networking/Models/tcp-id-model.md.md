@@ -339,3 +339,6 @@ Understanding TCP/IP is essential for:
 - designing scalable systems
 - diagnosing performance problems
 - securing network communication
+
+Working of Tcp 
+![[working-of-tcp.webp]]
