@@ -88,11 +88,11 @@ TCP/IP follows a **4-layer architecture**:
 
 ![[application-layer.gif]]
 ### Responsibilities
-
-- Provides network services to applications
-- Defines communication protocols
-- Handles data formatting and interpretation
-- Often includes encryption and session management
+- Acts as a bridge between user applications and lower network layers
+- Supports protocols such as HTTP, FTP, SMTP, and DNS
+- Handles data formatting so information is correctly understood by both sender and receiver
+- Provides encryption for secure communication
+- Manages sessions to track ongoing connections
 
 This layer maps to OSI:
 - Application
