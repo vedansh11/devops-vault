@@ -177,6 +177,7 @@ Common use cases:
 
 ## 3. Internet Layer
 
+![[internet_layer.webp]]
 ### Responsibilities
 
 - logical addressing using IP
@@ -206,6 +207,7 @@ Common use cases:
 
 ## 4. Network Access (Link) Layer
 
+![[network_access_link_layer_ 1.webp]]
 ### Responsibilities
 
 - physical data transmission
