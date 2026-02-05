@@ -126,7 +126,7 @@ Issues at this layer often appear as:
 ---
 
 ## 2. Transport Layer
-
+![[transport_layer_protocols.webp]]
 ### Responsibilities
 
 - Segmentation and reassembly
