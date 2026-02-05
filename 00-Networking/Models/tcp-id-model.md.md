@@ -316,7 +316,6 @@ Used to analyze:
 ## Why TCP/IP Is Used Instead of OSI
 
 ![[osi-to-tcp.webp]]
-
 - simpler structure
 - protocol-driven design
 - widely implemented
