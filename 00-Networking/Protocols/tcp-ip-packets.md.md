@@ -1,5 +1,6 @@
-# TCP/IP Packets
-![[TCP-packet-format.jpg]]
+# TCP/IP Packets! 
+![[tcp-header-format 1.webp]]
+DO- Data Offset
 ## What is a Packet?
 
 In networking, a **packet** is a small unit of data sent over a network.  
