@@ -1,8 +1,5 @@
 # DNS Explained: What It Is and How It Works
 
-## Video reference for this lecture:
-
-[![Watch the video](https://img.youtube.com/vi/hXFciOpUuOY/maxresdefault.jpg)](https://www.youtube.com/watch?v=hXFciOpUuOY&ab_channel=CloudWithVarJosh)
 ## Table of Contents
 
 - [Introduction](#introduction)  
@@ -686,6 +683,35 @@ With the IP in hand, the browser:
 ## Conclusion
 
 DNS is a globally distributed, hierarchical system that ensures websites are reachable using easy-to-remember names rather than IP addresses. It relies on clearly defined roles—**root servers**, **TLD registries**, **authoritative name servers**, and **recursive resolvers**—to delegate and resolve domain queries efficiently. Understanding how queries propagate through DNS layers and how caching, delegation, and authoritative answers work is essential for developers, site owners, and anyone managing domain infrastructure. As we’ve seen, even seemingly simple actions like typing a URL involve multiple DNS components working together in milliseconds to connect you to your destination.
+
+
+User types docs.kubernetes.io  
+│  
+▼  
+🖥️ 1. Local DNS Cache (OS / Browser)  
+│ (hit → return IP, stop)  
+▼  
+🌐 2. Recursive Resolver (ISP / 8.8.8.8 / 1.1.1.1)  
+│ checks its cache  
+│ (hit → return IP, stop)  
+▼  
+🟡 3. Root Nameserver (.)  
+│ → “I don’t know the IP”  
+│ → “Ask .io TLD”  
+▼  
+🔵 4. TLD Nameserver (.io)  
+│ → “I don’t know the IP”  
+│ → “Ask kubernetes.io NS”  
+▼  
+🟢 5. Authoritative NS (ns1.digitalocean.com)  
+│ → returns A/AAAA record for docs.kubernetes.io  
+▼  
+🌐 6. Resolver caches result (TTL)  
+▼  
+🖥️ 7. IP returned to client  
+▼  
+🔐 8. Browser → TCP + TLS → HTTP request → Website loads
+
 
 ---
 
