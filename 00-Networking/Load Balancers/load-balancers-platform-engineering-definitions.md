@@ -1,8 +1,8 @@
 
-# 🧠 Load Balancers, Sessions, Redis & Conntrack — Interview Revision Notes
+# Load Balancers, Sessions, Redis & Conntrack — Interview Revision Notes
 
 ---
-# 📌 CORE DEFINITIONS (Say this in interviews)
+#  CORE DEFINITIONS (Say this in interviews)
 
 ## 🔹 Load Balancer
 A load balancer distributes incoming traffic across multiple backend servers to ensure high availability, scalability, and fault tolerance.
@@ -48,7 +48,7 @@ One-liner:
 
 ---
 
-# 🔐 TLS TERMINATION (ALB)
+# TLS TERMINATION (ALB)
 
 Definition:
 TLS termination means the load balancer decrypts HTTPS traffic, inspects it, and forwards it to backend servers.
@@ -64,7 +64,7 @@ Client → HTTPS → ALB → HTTP/HTTPS → Backend
 
 ---
 
-# 🍪 STICKY SESSIONS
+# STICKY SESSIONS
 
 Definition:
 Sticky sessions force a user to always connect to the same backend server.
@@ -79,7 +79,7 @@ One-liner:
 
 ---
 
-# 🧠 STATELESS ARCHITECTURE
+#  STATELESS ARCHITECTURE
 
 Definition:
 Stateless services store session data outside the application (e.g., Redis) so any pod can handle any request.
@@ -89,7 +89,7 @@ One-liner:
 
 ---
 
-# 🔴 REDIS
+# REDIS
 
 Definition:
 Redis is an in-memory key–value data store used for caching, session storage, queues, and rate limiting.
@@ -112,7 +112,7 @@ Interview one-liner:
 
 ---
 
-# 🔵 FLOW TABLE (CONNTRACK)
+# FLOW TABLE (CONNTRACK)
 
 Definition:
 A flow table tracks active TCP/UDP connections so return packets go to the correct backend.
@@ -135,7 +135,7 @@ One-liner:
 
 ---
 
-# ⚡ NLB STICKINESS (CONNECTION LEVEL)
+#  NLB STICKINESS (CONNECTION LEVEL)
 
 NLB uses a flow hash based on the TCP 5-tuple:
 - Source IP
@@ -148,7 +148,7 @@ All packets of the same connection → same backend.
 
 ---
 
-# 🚨 CONNTRACK FULL ISSUE
+# CONNTRACK FULL ISSUE
 
 Error:
 nf_conntrack: table full, dropping packet
@@ -163,7 +163,7 @@ sysctl -w net.netfilter.nf_conntrack_max=262144
 
 ---
 
-# 🔁 REDIS vs FLOW TABLE
+#  REDIS vs FLOW TABLE
 
 | Feature | Redis | Flow table |
 |--------|-------|-----------|
@@ -199,7 +199,7 @@ One-liner:
 
 ---
 
-# 🔁 TRAFFIC FLOW (PRODUCTION)
+# TRAFFIC FLOW (PRODUCTION)
 
 Client  
 → DNS  
@@ -226,7 +226,7 @@ Security appliances | GWLB |
 
 ---
 
-# 📦 LOAD BALANCING ALGORITHMS
+#  LOAD BALANCING ALGORITHMS
 
 - Round robin
 - Weighted round robin
@@ -238,7 +238,7 @@ NLB → Flow hash routing
 
 ---
 
-# 🧠 TARGET GROUP
+#  TARGET GROUP
 
 Definition:
 A logical group of backend servers that a load balancer routes traffic to.
@@ -259,7 +259,7 @@ Conntrack → Connection memory
 
 ---
 
-# ❓ RAPID INTERVIEW Q&A
+#  RAPID INTERVIEW Q&A
 
 Q: ALB vs NLB?  
 ALB = L7 HTTP routing, NLB = L4 TCP/UDP high performance.
